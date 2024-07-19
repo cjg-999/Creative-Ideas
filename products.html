@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Empresa de Estampados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Empresa de Estampados</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-selection">
+            <h2>Elige tu Producto</h2>
+            <div id="products">
+                <div class="product" data-product="camiseta">
+                    <img src="camiseta.png" alt="Camiseta">
+                    <p>Camiseta</p>
+                </div>
+                <div class="product" data-product="taza">
+                    <img src="taza.png" alt="Taza">
+                    <p>Taza</p>
+                </div>
+                <div class="product" data-product="bolsa">
+                    <img src="bolsa.png" alt="Bolsa de tela">
+                    <p>Bolsa de tela</p>
+                </div>
+                <div class="product" data-product="gorro">
+                    <img src="gorro.png" alt="Gorro">
+                    <p>Gorro</p>
+                </div>
+                <div class="product" data-product="llavero">
+                    <img src="llavero.png" alt="Llavero">
+                    <p>Llavero</p>
+                </div>
+                <div class="product" data-product="libreta">
+                    <img src="libreta.png" alt="Libreta">
+                    <p>Libreta</p>
+                </div>
+                <div class="product" data-product="poster">
+                    <img src="poster.png" alt="Póster">
+                    <p>Póster</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="customizer" style="display: none;">
+            <h2>Personaliza tu Producto</h2>
+            <div id="product-preview">
+                <div id="product-image-container">
+                    <img id="product-image" src="producto_base.png" alt="Producto">
+                </div>
+                <div id="custom-text"></div>
+            </div>
+            <form id="customization-form">
+                <!-- Campos comunes -->
+                <div id="common-fields">
+                    <label for="text-input">Texto:</label>
+                    <input type="text" id="text-input" placeholder="Escribe tu texto aquí">
+                    
+                    <label for="color-input">Color del texto:</label>
+                    <input type="color" id="color-input" value="#000000">
+                    
+                    <label for="font-size-input">Tamaño de la fuente:</label>
+                    <input type="number" id="font-size-input" value="16" min="8" max="72">
+                    
+                    <label for="image-input">Subir Imagen:</label>
+                    <input type="file" id="image-input" accept="image/*">
+                </div>
+
+                <!-- Campos específicos -->
+                <div id="product-specific-fields"></div>
+                
+                <button type="button" id="apply-button">Aplicar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Empresa de Estampados. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
